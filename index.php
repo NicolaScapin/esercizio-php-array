@@ -1,3 +1,6 @@
+<?php 
+  $vedi_lista=$_GET['lista'];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,9 +14,27 @@
     <title>Hello, world!</title>
   </head>
   <body> 
-    <h1> Hello, world!</h1>
 
+    <?php 
+      if ($vedi_lista =='si'){ 
+    ?>
 
+    <ul>
+    <?php
+    $a=['arancia', 'carota', 'limone', 'fragola', 'anguria',];
+
+    foreach ($a as $nome)
+
+    {
+      print '<li>'.$nome.'</li>';
+    }
+
+    ?>
+  </ul>
+
+  <?php
+    }
+  ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
