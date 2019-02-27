@@ -1,6 +1,3 @@
-<?php 
-  $vedi_lista=$_GET['lista'];
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,30 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <title>Hello, world!</title>
+    <title>Esercizio php</title>
   </head>
   <body> 
+    <div class="container-fluid">
+      <div class="row">
+        <ul>
+          <?php$A = ["kiwi","arancia","mela"];
+          for ($B=0;$B<count($A);$B++)
+          {
+            print '<li>'. $A[$B].'<li>';
+          }
+          ?>
+        </ul>
+      </div>
+    </div>
 
-    <?php 
-      if ($vedi_lista =='si'){ 
-    ?>
-
-    <ul>
-    <?php
-    $a=['arancia', 'carota', 'limone', 'fragola', 'anguria',];
-
-    foreach ($a as $nome)
-
-    {
-      print '<li>'.$nome.'</li>';
-    }
-
-    ?>
-  </ul>
-
-  <?php
-    }
-  ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
